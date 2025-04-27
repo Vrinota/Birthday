@@ -1,0 +1,380 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  /* Floating Animation */
+  .floating {
+    animation: floatAnimation 3s ease-in-out infinite;
+  }
+  
+  @keyframes floatAnimation {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .password-screen {
+    background: #fff;
+    max-width: 400px;
+  }
+  
+  .btn-pink {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+  }
+  
+  .btn-pink:hover {
+    background-color: #ff85c1;
+  }
+  
+  .hint {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .main-content {
+    display: none;
+    text-align: center;
+  }
+  
+  .envelope {
+    background-color: #ffc0cb;
+    padding: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .envelope:hover {
+    background-color: #ffb6c1;
+  }
+  
+  .letter {
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 300px;
+    position: relative;
+  }
+  
+  /* Heart Button */
+  .heart-button {
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .heart-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .signature {
+    margin-top: 30px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+  /* ------------------------------------------------------------------------ */
+ /* style.css */
+
+/* Base styles */
+body {
+  background: linear-gradient(to bottom right, #ffe4e6, #fce7f3);
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  transition: transform 0.2s, background-color 0.2s;
+  margin: 0.5rem 0.5rem 0 0.5rem; /* Better spacing */
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #ec4899;
+}
+
+/* Final Message Link (View Surprise Button) */
+#finalMessage a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  animation: bounce 1.5s infinite;
+  transition: transform 0.2s;
+}
+
+#finalMessage a:hover {
+  transform: scale(1.05);
+}
+
+/* Question and Final Sections */
+#question1, #question2, #finalMessage {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Hide sections smoothly */
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bounce Animation for Button */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  h1 {
+      font-size: 1.8rem;
+  }
+  h2 {
+      font-size: 1.2rem;
+  }
+  button {
+      width: 100%;
+      margin-top: 0.75rem;
+  }
+  #question1, #question2, #finalMessage {
+      padding: 1.5rem 1rem;
+  }
+  #finalMessage a {
+      width: 100%;
+      padding: 1rem;
+  }
+}
+/* style.css */
+
+/* Base styles */
+body {
+  background: linear-gradient(to bottom right, #ffe4e6, #fce7f3);
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  transition: transform 0.2s, background-color 0.2s;
+  margin: 0.5rem 0.5rem 0 0.5rem; /* Margin to the right and bottom */
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #ec4899;
+}
+
+/* Final Message Link (View Surprise Button) */
+#finalMessage a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  animation: bounce 1.5s infinite;
+  transition: transform 0.2s;
+}
+
+#finalMessage a:hover {
+  transform: scale(1.05);
+}
+
+/* Question and Final Sections */
+#question1, #question2, #finalMessage {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Hide sections smoothly */
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bounce Animation for Button */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  h1 {
+      font-size: 1.8rem;
+  }
+  h2 {
+      font-size: 1.2rem;
+  }
+  /* Button Styling for Mobile */
+  button {
+      width: 100%;
+      margin-top: 0.75rem;
+  }
+  #question1, #question2, #finalMessage {
+      padding: 1.5rem 1rem;
+  }
+  #finalMessage a {
+      width: 100%;
+      padding: 1rem;
+  }
+  /* Add spacing between buttons on mobile */
+  button {
+      margin-bottom: 1rem; /* Adds space below each button */
+  }
+}
+/* style.css */
+
+/* Base styles */
+body {
+  background: linear-gradient(to bottom right, #ffe4e6, #fce7f3);
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  transition: transform 0.2s, background-color 0.2s;
+  margin: 0.5rem 0.5rem 0 0.5rem; /* Margin to the right and bottom */
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #ec4899;
+}
+
+/* Final Message Link (View Surprise Button) */
+#finalMessage a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  animation: bounce 1.5s infinite;
+  transition: transform 0.2s;
+}
+
+#finalMessage a:hover {
+  transform: scale(1.05);
+}
+
+/* Question and Final Sections */
+#question1, #question2, #finalMessage {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Hide sections smoothly */
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bounce Animation for Button */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  h1 {
+      font-size: 1.8rem;
+  }
+  h2 {
+      font-size: 1.2rem;
+  }
+  /* Button Styling for Mobile */
+  button {
+      width: 100%; /* Make buttons full-width on mobile */
+      margin-bottom: 1rem; /* Adds space between buttons */
+  }
+  #question1, #question2, #finalMessage {
+      padding: 1.5rem 1rem;
+  }
+  #finalMessage a {
+      width: 100%;
+      padding: 1rem;
+  }
+}
+/* <!--  
+ 
+  CSS Blossoming Flowers at Magical Night.
+  I've taken some inspiration by Yup Nguyen's Artwork: https://dribbble.com/shots/11096994-Virtual-Garden.
+  Made with Pure CSS & ♥
+--> */
+

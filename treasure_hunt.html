@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt Game</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-center">
+    <div class="max-w-xl mx-auto py-8">
+        <h1 class="text-3xl font-bold text-pink-600">Welcome to Your Treasure Hunt, Miss Jiya! 🎉</h1>
+        <p class="mt-4 text-xl">Answer these questions about us, and unlock your surprise! 💖</p>
+
+        <div id="question1" class="mt-8">
+            <h2 class="text-xl font-semibold text-gray-700">Question 1: Who would fight for the last piece of chocolate?</h2>
+            <div class="mt-4">
+                <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600" onclick="checkAnswer('question1', 'a')">Jiya</button>
+                <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600" onclick="checkAnswer('question1', 'b')">Swagat</button>
+                <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600" onclick="checkAnswer('question1', 'c')">Mylo</button>
+            </div>
+        </div>
+
+        <div id="question2" class="mt-8 hidden">
+            <h2 class="text-xl font-semibold text-gray-700">Question 2: Who wins in a "Who loves more" contest?</h2>
+            <div class="mt-4">
+                <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600" onclick="checkAnswer('question2', 'a')">Swagat</button>
+                <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600" onclick="checkAnswer('question2', 'b')">Both</button>
+                <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-600" onclick="checkAnswer('question2', 'c')">Jiya</button>
+            </div>
+        </div>
+
+    
+        <div id="finalMessage" class="mt-8 hidden">
+            <h2 class="text-2xl font-bold text-green-600">Awww Baby Congratulations, you won! 🎉</h2>
+            <p class="mt-4">You've unlocked your surprise! 🎁</p>
+            <a href="flower.html" class="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 mt-4">View Your Surprise</a>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(question, answer) {
+            let correctAnswers = {
+                'question1': 'a', // Correct answer for question 1 is 'Paris'
+                'question2': 'b'
+                
+            };
+
+            if (answer === correctAnswers[question]) {
+                document.getElementById(question).classList.add('hidden'); // Hide current question
+                let nextQuestion = 'question' + (parseInt(question.slice(-1)) + 1);
+                if (document.getElementById(nextQuestion)) {
+                    document.getElementById(nextQuestion).classList.remove('hidden'); // Show next question
+                } else {
+                    document.getElementById('finalMessage').classList.remove('hidden'); // Show final message
+                }
+            } else {
+                alert('Oops! That\'s not the right answer. Try again!');
+            }
+        }
+    </script>
+</body>
+</html>
